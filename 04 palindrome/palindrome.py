@@ -67,5 +67,5 @@ def digits_count(x):
 
     return 1 + digits_count(x / 10)
 
-print(reverse(12345.0))
+print(reverse(-12345000))
 
