@@ -11,6 +11,7 @@ Consider capital letter to be the same as lower case
 
 
 def get_char_map(str):
+    str = clean_string(str)
     char_map = {}
 
     for char in str:
@@ -19,11 +20,12 @@ def get_char_map(str):
     return char_map
 
 
-def anagrams(string_a, string_b):
-    string_a = re.sub("[\W]", '', string_a).lower()
-    string_b = re.sub("[\W]", '', string_b).lower()
+def clean_string(str):
+    return re.sub("[\W]", '', str).lower()
 
-    if len(string_a) != len(string_b):
+
+def anagrams(string_a, string_b):
+    if len(clean_string(string_a)) != len(clean_string(string_b)):
         return False
 
     a_char_map = get_char_map(string_a)
