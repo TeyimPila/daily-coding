@@ -75,3 +75,19 @@ def chunk_v4(arr, chunk_size):
 
 result = chunk_v4([1, 2, 3, 4, 6], 8)
 print(result)
+
+
+def chunk_v5(arr, chunk_size):
+    chunked = []
+    index = 0
+
+    while index < len(arr):
+        chunk = arr[index:index + chunk_size]
+        chunked.append(chunk)
+        index += chunk_size
+
+    return chunked
+
+
+result = chunk_v5([1, 2, 3, 4, 6], 2)
+print(result)
