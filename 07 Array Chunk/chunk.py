@@ -58,7 +58,6 @@ result = chunk_v3([1, 2, 3, 4], 3)
 print(result)
 
 
-
 def chunk_v4(arr, chunk_size):
     chunked = []
     current_chunk = []
