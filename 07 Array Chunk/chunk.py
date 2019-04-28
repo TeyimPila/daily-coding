@@ -6,6 +6,7 @@ Given an array and chunk size, divide the array into many subarrays where each s
 
 EXAMPLES:
 chunk([1,2,3,4,5], 2) --> [[1,2], [3,4], [5]]
+chunk([1,2,3,4,5], 3) --> [[1,2, 3], [4, 5]]
 """
 
 
