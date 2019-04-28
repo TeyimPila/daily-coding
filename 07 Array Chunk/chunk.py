@@ -58,3 +58,21 @@ result = chunk_v3([1, 2, 3, 4], 3)
 print(result)
 
 
+
+def chunk_v4(arr, chunk_size):
+    chunked = []
+    current_chunk = []
+
+    for i in range(len(arr)):
+
+        current_chunk.append(arr[i])
+
+        if len(current_chunk) == chunk_size or i == len(arr) - 1:
+            chunked.append(current_chunk)
+            current_chunk = []
+
+    return chunked
+
+
+result = chunk_v4([1, 2, 3, 4, 6], 8)
+print(result)
