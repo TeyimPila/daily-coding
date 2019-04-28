@@ -39,3 +39,22 @@ def chunk_v2(arr, chunk_size):
 result = chunk_v2([1, 2, 3, 4], 8)
 
 print(result)
+
+
+def chunk_v3(arr, chunk_size):
+    chunked = []
+
+    for element in arr:
+        current_chunk = [] if len(chunked) == 0 else chunked[len(chunked) - 1]
+
+        if current_chunk == [] or len(current_chunk) == chunk_size:
+            chunked.append([element])
+        else:
+            current_chunk.append(element)
+    return chunked
+
+
+result = chunk_v3([1, 2, 3, 4], 3)
+print(result)
+
+
