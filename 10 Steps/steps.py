@@ -13,9 +13,23 @@ def triangle(n):
             print(spaces + "#" * i + spaces)
 
 
+def recursive_steps(n, row=0, stair=''):
+    if n == row:
+        return
 
-steps(5)
-triangle(11)
+    if len(stair) == n:
+        print(stair)
+        return recursive_steps(n, row + 1)
 
-steps(5)
-triangle(11)
+    stair += '#' if len(stair) < row else ' '
+    recursive_steps(n, row, stair)
+
+
+#
+# steps(5)
+# triangle(11)
+#
+# steps(5)
+# triangle(11)
+
+recursive_steps(6)
